@@ -3,27 +3,27 @@ package apiitools;
 import java.io.File;
 import java.io.IOException;
 /**
- * ¸ÃÀàÊÇÒ»¸öFileÀàµÄ¹¤¾ßÀà£¬°üº¬ÁË´´½¨ÎÄ¼ş£¬É¾³ıÎÄ¼ş»òÄ¿Â¼£¬´´½¨Ä¿Â¼£¬¼ÆËãÎÄ¼ş/Ä¿Â¼×Ü´óĞ¡µÈ·½·¨¡£
+ * è¯¥ç±»æ˜¯ä¸€ä¸ªFileç±»çš„å·¥å…·ç±»ï¼ŒåŒ…å«äº†åˆ›å»ºæ–‡ä»¶ï¼Œåˆ é™¤æ–‡ä»¶æˆ–ç›®å½•ï¼Œåˆ›å»ºç›®å½•ï¼Œè®¡ç®—æ–‡ä»¶/ç›®å½•æ€»å¤§å°ç­‰æ–¹æ³•ã€‚
  * @author Administrator
  *
  */
 public class FileItools {
 
 	/**
-	 * ´´½¨ÎÄ¼ş£ºÈç¹ûÎÄ¼ş²»´æÔÚÔò£¬´´½¨ÎÄ¼ş£»ÈôÒÑ¾­´æÔÚ£¬ÔòÌáÊ¾£ºÎÄ¼şÒÑ´æÔÚ¡£
+	 * åˆ›å»ºæ–‡ä»¶ï¼šå¦‚æœæ–‡ä»¶ä¸å­˜åœ¨åˆ™ï¼Œåˆ›å»ºæ–‡ä»¶ï¼›è‹¥å·²ç»å­˜åœ¨ï¼Œåˆ™æç¤ºï¼šæ–‡ä»¶å·²å­˜åœ¨ã€‚
 	 * @param file
 	 * @throws IOException
 	 */
 	public static void creatFile(File file) throws IOException {
 		if (!file.exists()) {
 			file.createNewFile();
-			System.out.println(file.getAbsolutePath() + " " + "ÎÄ¼ş´´½¨³É¹¦£¡");
+			System.out.println(file.getAbsolutePath() + " " + "æ–‡ä»¶åˆ›å»ºæˆåŠŸï¼");
 		} else {
-			System.out.println(file.getAbsolutePath() + " " + "(ÎÄ¼şÒÑ´æÔÚ£¡)");
+			System.out.println(file.getAbsolutePath() + " " + "(æ–‡ä»¶å·²å­˜åœ¨ï¼)");
 		}
 	}
 	/**
-	 * É¾³ıÎÄ¼ş»òÄ¿Â¼:Èç¹ûÊÇÎÄ¼şÔòÖ±½ÓÉ¾³ı£¬ÈôÊÇÄ¿Â¼ÔòÉ¾³ıÄ¿Â¼(·Ç¿ÕÄ¿Â¼Ò²ÄÜÉ¾³ı)£¬Èô²»´æÔÚ£¬ÌáÊ¾ÎÄ¼ş/Ä¿Â¼²»´æÔÚ¡£
+	 * åˆ é™¤æ–‡ä»¶æˆ–ç›®å½•:å¦‚æœæ˜¯æ–‡ä»¶åˆ™ç›´æ¥åˆ é™¤ï¼Œè‹¥æ˜¯ç›®å½•åˆ™åˆ é™¤ç›®å½•(éç©ºç›®å½•ä¹Ÿèƒ½åˆ é™¤)ï¼Œè‹¥ä¸å­˜åœ¨ï¼Œæç¤ºæ–‡ä»¶/ç›®å½•ä¸å­˜åœ¨ã€‚
 	 * @param file
 	 */
 	public static void deleteFile(File file) {
@@ -35,29 +35,29 @@ public class FileItools {
 				}
 			}
 			file.delete();
-			System.out.println(file.getAbsolutePath() + " " + "ÒÑÉ¾³ı");
+			System.out.println(file.getAbsolutePath() + " " + "å·²åˆ é™¤");
 		} else {
-			System.out.println(file.getAbsolutePath() + " " + "(ÎÄ¼ş/Ä¿Â¼²»´æÔÚ)");
+			System.out.println(file.getAbsolutePath() + " " + "(æ–‡ä»¶/ç›®å½•ä¸å­˜åœ¨)");
 		}
 	}
 	/**
-	 * ´´½¨Ä¿Â¼£ºÈôÄ¿Â¼ÒÑ´æÔÚ£¬ÌáÊ¾Ä¿Â¼´æÔÚ¡£ÈôÄ¿Â¼²»´æÔÚÔò´´½¨Ä¿Â¼£¬¿ÉÒÔÖ¸¶¨¶à²ãÄ¿Â¼´´½¨¡£
+	 * åˆ›å»ºç›®å½•ï¼šè‹¥ç›®å½•å·²å­˜åœ¨ï¼Œæç¤ºç›®å½•å­˜åœ¨ã€‚è‹¥ç›®å½•ä¸å­˜åœ¨åˆ™åˆ›å»ºç›®å½•ï¼Œå¯ä»¥æŒ‡å®šå¤šå±‚ç›®å½•åˆ›å»ºã€‚
 	 * @param file
 	 */
 	public static void creatDirs(File file) {
 		if (!file.exists()) {
 			file.mkdirs();
-			System.out.println(file.getAbsolutePath() + " " + "Ä¿Â¼´´½¨³É¹¦£¡");
+			System.out.println(file.getAbsolutePath() + " " + "ç›®å½•åˆ›å»ºæˆåŠŸï¼");
 		} else {
-			System.out.println(file.getAbsolutePath() + " " + "(Ä¿Â¼ÒÑ´æÔÚ£¡)");
+			System.out.println(file.getAbsolutePath() + " " + "(ç›®å½•å·²å­˜åœ¨ï¼)");
 		}
 	}
 	
 	static long lengthSum = 0;
 	/**
-	 * ¼ÆËãÎÄ¼ş/Ä¿Â¼×Ü´óĞ¡£ºµ¥Î»×Ö½Ú¡£
+	 * è®¡ç®—æ–‡ä»¶/ç›®å½•æ€»å¤§å°ï¼šå•ä½å­—èŠ‚ã€‚
 	 * @param file
-	 * @return lengthSum ×÷Îª¸ÃÀàµÄÒ»¸ö¾²Ì¬±äÁ¿£¬ÒâÍ¼ÔÚÓÚ¼ÇÂ¼ÎÄ¼ş´óĞ¡¡£
+	 * @return lengthSum ä½œä¸ºè¯¥ç±»çš„ä¸€ä¸ªé™æ€å˜é‡ï¼Œæ„å›¾åœ¨äºè®°å½•æ–‡ä»¶å¤§å°ã€‚
 	 */
 	public static long printFileLength(File file) {
 		if (file.isDirectory()) {
@@ -87,5 +87,6 @@ public class FileItools {
 //		fileListFF = file.listFiles(ff);
 //		return fileListFF;
 //	}
+	//æˆ‘æ›´æ”¹äº†è¿™ä¸ªæ–‡ä»¶,è¯·reviewä¹‹åæ›´æ–°
 	
 }
